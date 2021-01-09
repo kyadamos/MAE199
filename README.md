@@ -27,7 +27,7 @@ We recommend that you use pip to install the libraries we use; if you do not hav
 
 To install the latest version of PyTorch, refer to the PyTorch's [Get Started](https://pytorch.org/get-started/locally/) page.
 
-![PyTorch Install Screenshot](https://github.com/kyadamos/MAE199/tree/main/screenshots/PyTorch_Installation.png)
+![PyTorch Install Screenshot](https://github.com/kyadamos/MAE199/blob/main/screenshots/PyTorch_Installation.png)
 
 Once you select the options that suit your preferences, run the install command in the environment you want to use PyTorch in.
 
