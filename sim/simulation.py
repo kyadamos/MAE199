@@ -1,7 +1,7 @@
 import gym
-import wrapped_gym_env
-from agent import randomAgent
-import simglucose.envs
+
+from sim_envs import GymGlucose
+from agent import randomAgent, QAgent
 
 def basic_reward(BG):
     if BG[-1] > 180:
@@ -14,17 +14,20 @@ def basic_reward(BG):
 # Create the environment
 env = gym.make('simglucose-adult1-v0')
 
-# Select an agent
-Agent = randomAgent(env)
+# Random Agent
+# agent = randomAgent(env)
+
+# Q-Learning Agent
+agent = QAgent(env)
 episodes = 5
 
 # Run the simulation
 for i in range(episodes):
     obs = env.reset()
-    for t in range(20):
+    for t in range(50):
         env.render(mode = "human")
-        actddd = Agent.act()
-        obs, reward, done, info = env.step(actddd)
+        action = agent.act()
+        obs, reward, done, info = env.step(action)
         if done:
             break
 
